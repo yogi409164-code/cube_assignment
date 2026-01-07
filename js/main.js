@@ -176,7 +176,7 @@ $(document).ready(function() {
         // Check the radio button
         $radio.prop('checked', true);
         // Update included bottles
-        updateIncludedBottles();
+        // updateIncludedBottles();
       });
     }
 
@@ -298,39 +298,39 @@ $(document).ready(function() {
       }
       
       // Update included bottles
-      updateIncludedBottles();
+      // updateIncludedBottles();
     });
 
     // Initialize included bottles on page load
-    updateIncludedBottles();
+    // updateIncludedBottles();
   })();
 
-  // Accordion Functionality
+  // Accordion Functionality (Vanilla JavaScript)
   (function() {
-    $('.accordion-item').each(function() {
-      const $item = $(this);
-      const $header = $item.find('.accordion-header');
-      const $icon = $item.find('.accordion-icon');
+    const accordionItems = document.querySelectorAll('.accordion-item');
+    
+    accordionItems.forEach(function(item) {
+      const header = item.querySelector('.accordion-header');
+      const icon = item.querySelector('.accordion-icon');
       
-      if ($header.length) {
-        $header.on('click', function() {
-          const isActive = $item.hasClass('active');
+      if (header) {
+        header.addEventListener('click', function() {
+          const isActive = item.classList.contains('active');
           
           // Close all accordion items
-          $('.accordion-item').each(function() {
-            const $accItem = $(this);
-            $accItem.removeClass('active');
-            const $accIcon = $accItem.find('.accordion-icon');
-            if ($accIcon.length) {
-              $accIcon.attr('data-feather', 'plus');
+          accordionItems.forEach(function(accItem) {
+            accItem.classList.remove('active');
+            const accIcon = accItem.querySelector('.accordion-icon');
+            if (accIcon) {
+              accIcon.setAttribute('data-feather', 'plus');
             }
           });
           
           // Open clicked item if it was closed
           if (!isActive) {
-            $item.addClass('active');
-            if ($icon.length) {
-              $icon.attr('data-feather', 'minus');
+            item.classList.add('active');
+            if (icon) {
+              icon.setAttribute('data-feather', 'minus');
             }
           }
           
