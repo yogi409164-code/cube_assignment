@@ -1,0 +1,48 @@
+/* Google Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+
+/* Global color variables */
+:root {
+  /* Font Family */
+  --font-primary: 'Inter', sans-serif;
+  /* Brand greens */
+  --green-900: #0a3d23;
+  --green-800: #0a4d2c;
+  --green-700: #0d5a33;
+  --green-600: #1F6F2F;
+  --green-500: #5f8f6b;
+
+  /* Text */
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --text-muted: #6b7280;
+  --text-inverse: #ffffff;
+
+  /* Neutrals */
+  --white: #ffffff;
+  --black: #000000;
+  --neutral-50: #f9fafb;
+  --neutral-100: #f5f5f5;
+  --neutral-200: #e5e7eb;
+  --neutral-300: #d1d5db;
+  --neutral-400: #9ca3af;
+  --neutral-700: #374151;
+
+  /* Accents */
+  --blue-500: #3b82f6;
+  --amber-400: #fbbf24;
+  --amber-500: #f59e0b;
+
+  /* States */
+  --success-bg: #d1fae5;
+  --success: var(--green-800);
+  --danger-bg: #fee2e2;
+  --danger: #dc2626;
+
+  /* Specials */
+  --cta-brown: #8B4513;
+  --cta-brown-hover: #A0522D;
+  --green-tint: #f0f9f4; /* light green background highlight */
+}
+

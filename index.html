@@ -1,0 +1,722 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GTG Perfumes</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./css/common.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/product.css" />
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="nav-container">
+    <div class="logo">GTG</div>
+
+    <nav class="nav">
+      <a href="#">Home</a>
+
+      <div class="nav-dropdown">
+        <span>Shop</span>
+        <i data-feather="chevron-down" class="arrow-icon"></i>
+      </div>
+
+      <a href="#">Fragrances</a>
+      <a href="#">About Us</a>
+      <a href="#">Blog</a>
+      <a href="#">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <i data-feather="search" class="search-icon"></i>
+      <a href="#" class="btn btn-nav">Shop Now</a>
+    </div>
+
+    <div class="hamburger">☰</div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero position-relative vh-100 d-flex align-items-center overflow-hidden" style="min-height: 600px;">
+  <img src="./assets/images/home_bg.png" class="hero-bg position-absolute top-0 start-0 w-100 h-100 object-fit-cover" style="z-index: 1;" alt="background">
+
+  <div class="hero-content position-relative d-flex flex-column" style="z-index: 2; margin-left: 80px; max-width: 700px; gap: 28px; padding-top: 100px;">
+
+    <div class="badge d-inline-flex align-items-center rounded-pill text-white fw-medium" style="gap: 10px; padding: 10px 20px; background: linear-gradient(90deg, var(--green-500) 0%, var(--green-800) 100%); font-size: 0.9375rem; width: fit-content; box-shadow: 0 2px 8px rgba(10, 77, 44, 0.2); letter-spacing: -0.01em;">
+      <i data-feather="award" class="badge-icon" style="width: 18px; height: 18px; color: var(--white); stroke-width: 2; flex-shrink: 0;"></i>
+      <span>Awarded the best perfume in the world</span>
+    </div>
+
+    <h1 class="fw-bold m-0" style="font-size: 5rem; font-weight: 800; color: var(--green-900); line-height: 1.05; letter-spacing: -0.02em;">Live your best life.</h1>
+
+    <div class="stats d-flex" style="gap: 48px; margin-top: 8px;">
+      <div class="stat d-flex flex-column" style="gap: 4px;">
+        <div class="stat-number d-flex align-items-baseline" style="line-height: 1;">
+          <span class="stat-value counter" data-target="10" style="font-size: 4rem; font-weight: 800; line-height: 1; display: inline-block; background: linear-gradient(180deg, #7fb88f 0%, #4a7c5a 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; letter-spacing: -0.02em;">0</span>
+          <span class="x" style="font-size: 2.5rem; font-weight: 800; margin-left: 4px; display: inline-block; line-height: 1; background: linear-gradient(180deg, #7fb88f 0%, #4a7c5a 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; vertical-align: baseline;">x</span>
+        </div>
+        <span class="stat-label" style="font-size: 1rem; color: #3c6b4f; font-weight: 500; text-transform: lowercase; margin-top: 6px; letter-spacing: -0.01em;">power</span>
+      </div>
+
+      <div class="stat d-flex flex-column" style="gap: 4px;">
+        <div class="stat-number d-flex align-items-baseline" style="line-height: 1;">
+          <span class="stat-value counter" data-target="9" style="font-size: 4rem; font-weight: 800; line-height: 1; display: inline-block; background: linear-gradient(180deg, #7fb88f 0%, #4a7c5a 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; letter-spacing: -0.02em;">0</span>
+        </div>
+        <span class="stat-label" style="font-size: 1rem; color: #3c6b4f; font-weight: 500; text-transform: lowercase; margin-top: 6px; letter-spacing: -0.01em;">ingredients</span>
+      </div>
+
+      <div class="stat d-flex flex-column" style="gap: 4px;">
+        <div class="stat-number d-flex align-items-baseline" style="line-height: 1;">
+          <span class="stat-value counter" data-target="20000" style="font-size: 4rem; font-weight: 800; line-height: 1; display: inline-block; background: linear-gradient(180deg, #7fb88f 0%, #4a7c5a 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; letter-spacing: -0.02em;">0</span>
+          <span class="plus" style="font-size: 2.5rem; font-weight: 800; margin-left: 4px; display: inline-block; line-height: 1; background: linear-gradient(180deg, #7fb88f 0%, #4a7c5a 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; vertical-align: baseline;">+</span>
+        </div>
+        <span class="stat-label" style="font-size: 1rem; color: #3c6b4f; font-weight: 500; text-transform: lowercase; margin-top: 6px; letter-spacing: -0.01em;">happy customers</span>
+      </div>
+    </div>
+
+    <a href="#" class="btn btn-hero rounded-pill fw-semibold" style="width: fit-content; padding: 12px 28px; background: linear-gradient(180deg, var(--green-700) 0%, var(--green-800) 100%); color: var(--white); box-shadow: 0 2px 8px rgba(10, 77, 44, 0.3); font-size: 0.9375rem; letter-spacing: -0.01em;">Shop Now</a>
+  </div>
+
+</section>
+
+<!-- PRODUCT SECTION -->
+<section class="product-page py-5 bg-white">
+  <div class="container" style="max-width: 1400px;">
+    <div class="row g-4 g-lg-5" style="--bs-gutter-x: 60px;">
+      <!-- Left Column: Product Gallery -->
+      <div class="col-12 col-lg-6">
+        <div class="product-gallery position-relative">
+          <div class="gallery-main position-relative w-100 rounded-3 overflow-hidden d-flex align-items-center justify-content-center mb-4" style="height: calc(100vh - 200px); min-height: 600px; max-height: 800px; background: var(--neutral-100);">
+            <img src="./assets/images/product_1.png" alt="GTG Perfume" class="main-product-image w-100 h-100 object-fit-cover d-block" id="mainProductImage">
+            
+            <div class="gallery-nav-bar position-absolute bottom-0 start-0 end-0 d-flex align-items-center justify-content-between px-3 pb-3" style="z-index: 10; pointer-events: none;">
+              <button class="gallery-arrow gallery-prev btn rounded-circle d-flex align-items-center justify-content-center" style="width: 40px;  background: none; border: 1.5px solid var(--green-800); pointer-events: auto;" aria-label="Previous image">
+                <i data-feather="chevron-left" class="arrow-icon" style="width: 18px; height: 18px; color: var(--green-800); stroke-width: 2.5;"></i>
+              </button>
+              <div class="gallery-dots d-flex justify-content-center align-items-center gap-2" style="pointer-events: auto;">
+                <span class="dot active rounded-circle" data-index="0" style="width: 8px; height: 8px; background: var(--green-800); border: 1.5px solid var(--green-800); cursor: pointer;"></span>
+                <span class="dot rounded-circle" data-index="1" style="width: 8px; height: 8px; background: transparent; border: 1.5px solid var(--green-800); cursor: pointer;"></span>
+                <span class="dot rounded-circle" data-index="2" style="width: 8px; height: 8px; background: transparent; border: 1.5px solid var(--green-800); cursor: pointer;"></span>
+                <span class="dot rounded-circle" data-index="3" style="width: 8px; height: 8px; background: transparent; border: 1.5px solid var(--green-800); cursor: pointer;"></span>
+              </div>
+              <button class="gallery-arrow gallery-next btn rounded-circle d-flex align-items-center justify-content-center" style="width: 40px;  background: none; border: 1.5px solid var(--green-800); pointer-events: auto;" aria-label="Next image">
+                <i data-feather="chevron-right" class="arrow-icon" style="width: 18px; height: 18px; color: var(--green-800); stroke-width: 2.5;"></i>
+              </button>
+            </div>
+          </div>
+          
+          <div class="gallery-thumbnails row row-cols-4 g-2">
+            <div class="col">
+              <div class="thumbnail active rounded-2 overflow-hidden" data-index="0" style="height: 120px; cursor: pointer; border: 2px solid var(--green-800); background: var(--neutral-100);">
+                <img src="./assets/images/product_1.png" alt="Thumbnail 1" class="w-100 h-100 object-fit-cover">
+              </div>
+            </div>
+            <div class="col">
+              <div class="thumbnail rounded-2 overflow-hidden" data-index="1" style="height: 120px; cursor: pointer; border: 2px solid transparent; background: var(--neutral-100);">
+                <img src="./assets/images/p1(2).jpg" alt="Thumbnail 2" class="w-100 h-100 object-fit-cover">
+              </div>
+            </div>
+            <div class="col">
+              <div class="thumbnail rounded-2 overflow-hidden" data-index="2" style="height: 120px; cursor: pointer; border: 2px solid transparent; background: var(--neutral-100);">
+                <img src="./assets/images/p1(3).jpg" alt="Thumbnail 3" class="w-100 h-100 object-fit-cover">
+              </div>
+            </div>
+            <div class="col">
+              <div class="thumbnail rounded-2 overflow-hidden" data-index="3" style="height: 120px; cursor: pointer; border: 2px solid transparent; background: var(--neutral-100);">
+                <img src="./assets/images/p1(4).jpg" alt="Thumbnail 4" class="w-100 h-100 object-fit-cover">
+              </div>
+            </div>
+            <div class="col">
+              <div class="thumbnail rounded-2 overflow-hidden" data-index="4" style="height: 120px; cursor: pointer; border: 2px solid transparent; background: var(--neutral-100);">
+                <img src="./assets/images/p1(1).jpg" alt="Thumbnail 5" class="w-100 h-100 object-fit-cover">
+              </div>
+            </div>
+            <div class="col">
+              <div class="thumbnail rounded-2 overflow-hidden" data-index="5" style="height: 120px; cursor: pointer; border: 2px solid transparent; background: var(--neutral-100);">
+                <img src="./assets/images/p1(2).jpg" alt="Thumbnail 6" class="w-100 h-100 object-fit-cover">
+              </div>
+            </div>
+            <div class="col">
+              <div class="thumbnail rounded-2 overflow-hidden" data-index="6" style="height: 120px; cursor: pointer; border: 2px solid transparent; background: var(--neutral-100);">
+                <img src="./assets/images/p1(3).jpg" alt="Thumbnail 7" class="w-100 h-100 object-fit-cover">
+              </div>
+            </div>
+            <div class="col">
+              <div class="thumbnail rounded-2 overflow-hidden" data-index="7" style="height: 120px; cursor: pointer; border: 2px solid transparent; background: var(--neutral-100);">
+                <img src="./assets/images/p1(4).jpg" alt="Thumbnail 8" class="w-100 h-100 object-fit-cover">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Product Details -->
+      <div class="col-12 col-lg-6">
+        <div class="product-info d-flex flex-column">
+          <h1 class="product-title fw-bold m-0" style="font-size: 2.5rem; color: var(--green-900); letter-spacing: -0.02em;">GTG Perfumes</h1>
+          
+          <div class="product-reviews d-flex align-items-center gap-2 mb-3">
+            <div class="stars d-flex" style="gap: 2px;">
+              <i data-feather="star" class="star filled" style="width: 18px; height: 18px; color: var(--green-500); stroke-width: 2; fill: var(--green-500);"></i>
+              <i data-feather="star" class="star filled" style="width: 18px; height: 18px; color: var(--green-500); stroke-width: 2; fill: var(--green-500);"></i>
+              <i data-feather="star" class="star filled" style="width: 18px; height: 18px; color: var(--green-500); stroke-width: 2; fill: var(--green-500);"></i>
+              <i data-feather="star" class="star filled" style="width: 18px; height: 18px; color: var(--green-500); stroke-width: 2; fill: var(--green-500);"></i>
+              <i data-feather="star" class="star filled" style="width: 18px; height: 18px; color: var(--green-500); stroke-width: 2; fill: var(--green-500);"></i>
+            </div>
+            <span class="review-text" style="font-size: 0.875rem; color: var(--text-muted);">4.7 (999+ reviews)</span>
+          </div>
+
+          <p class="product-description mb-3" style="font-size: 0.9375rem; line-height: 1.7; color: var(--text-secondary);">
+            Experience the timeless allure backed by modern artistry, captured in every bottle of our fragrance. Crafted for those who seek to elevate their essence with purpose and sophistication.
+          </p>
+
+          <div class="most-popular-badge text-center fw-semibold text-white" style="padding: 10px 20px; background: linear-gradient(to right, #00C853, #0B4F2A); border-radius: 12px 12px 0 0;">Most Popular</div>
+
+          <!-- Subscription Container -->
+          <div class="subscription-container bg-white border rounded-2 p-3 mb-4 shadow-sm">
+            <!-- Single Subscription -->
+            <div class="subscription-section d-flex flex-column">
+              <label class="subscription-radio d-flex align-items-center" style="cursor: pointer;">
+                <input type="radio" name="subscription" value="single" checked id="singleSubscription" class="form-check-input me-3" style="width: 20px; height: 20px; accent-color: var(--green-800);">
+                <div class="subscription-content d-flex align-items-center justify-content-between flex-grow-1 border-bottom pb-2" style="border-color: var(--neutral-200) !important;">
+                  <span class="subscription-label" style="font-size: 1.1875rem; color: var(--text-muted);">Single Subscription</span>
+                  <div class="subscription-price d-flex align-items-center gap-2">
+                    <span class="price fw-bold" style="font-size: 1.3125rem; color: var(--text-primary);">$99.99</span>
+                    <span class="price-old text-decoration-line-through" style="font-size: 1.25rem; color: var(--neutral-400);">$146</span>
+                  </div>
+                </div>
+              </label>
+            </div>
+
+            <!-- Fragrance Selection 1 -->
+            <div class="fragrance-section fragrance-section-1 mt-4">
+              <h3 class="section-title fw-semibold m-0 mb-3" id="fragranceTitle1" style="font-size: 0.9375rem; color: var(--green-900);">Choose Fragrance</h3>
+              <div class="fragrance-options d-flex gap-2 mt-3">
+                <label class="fragrance-option active position-relative d-flex flex-column bg-white border rounded-2 p-2 flex-grow-1" data-fragrance="original" style="cursor: pointer; transition: all 0.2s;">
+                  <input type="radio" name="fragrance1" value="original" checked class="position-absolute opacity-0">
+                  <div class="fragrance-header d-flex align-items-center gap-2 mb-2">
+                    <span class="fragrance-radio-custom rounded-circle" style="width: 18px; height: 18px; border: 2px solid var(--neutral-300); background: var(--white); flex-shrink: 0;"></span>
+                    <span class="fragrance-name fw-medium" style="font-size: 0.875rem; color: var(--text-primary);">Original</span>
+                  </div>
+                  <div class="fragrance-badge position-absolute text-white text-uppercase fw-bold" style="top: -8px; left: 50%; transform: translateX(-50%); background: var(--green-800); padding: 4px 10px; font-size: 0.625rem; letter-spacing: 0.5px; z-index: 10; border-radius: 10px 0px 10px 0px;">BEST-SELLER</div>
+                  <div class="fragrance-bottle w-100 rounded-2 d-flex align-items-center justify-content-center mt-2" style="height: 140px; background: var(--neutral-50); padding: 12px 8px;">
+                    <img src="./assets/images/p(1).png" alt="Original" class="w-100 h-100 object-fit-contain">
+                  </div>
+                </label>
+
+                <label class="fragrance-option position-relative d-flex flex-column bg-white border rounded-2 p-2 flex-grow-1" data-fragrance="lily" style="cursor: pointer; transition: all 0.2s;">
+                  <input type="radio" name="fragrance1" value="lily" class="position-absolute opacity-0">
+                  <div class="fragrance-header d-flex align-items-center gap-2 mb-2">
+                    <span class="fragrance-radio-custom rounded-circle" style="width: 18px; height: 18px; border: 2px solid var(--neutral-300); background: var(--white); flex-shrink: 0;"></span>
+                    <span class="fragrance-name fw-medium" style="font-size: 0.875rem; color: var(--text-primary);">Lily</span>
+                  </div>
+                  <div class="fragrance-bottle w-100 rounded-2 d-flex align-items-center justify-content-center mt-2" style="height: 140px; background: var(--neutral-50); padding: 12px 8px;">
+                    <img src="./assets/images/p(2).png" alt="Lily" class="w-100 h-100 object-fit-contain">
+                  </div>
+                </label>
+
+                <label class="fragrance-option position-relative d-flex flex-column bg-white border rounded-2 p-2 flex-grow-1" data-fragrance="rose" style="cursor: pointer; transition: all 0.2s;">
+                  <input type="radio" name="fragrance1" value="rose" class="position-absolute opacity-0">
+                  <div class="fragrance-header d-flex align-items-center gap-2 mb-2">
+                    <span class="fragrance-radio-custom rounded-circle" style="width: 18px; height: 18px; border: 2px solid var(--neutral-300); background: var(--white); flex-shrink: 0;"></span>
+                    <span class="fragrance-name fw-medium" style="font-size: 0.875rem; color: var(--text-primary);">Rose</span>
+                  </div>
+                  <div class="fragrance-bottle w-100 rounded-2 d-flex align-items-center justify-content-center mt-2" style="height: 140px; background: var(--neutral-50); padding: 12px 8px;">
+                    <img src="./assets/images/p(3).png" alt="Rose" class="w-100 h-100 object-fit-contain">
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <!-- Fragrance Selection 2 (Hidden by default) -->
+            <div class="fragrance-section fragrance-section-2 mt-4 p-3 rounded-2" style="display: none; border: 2px dashed var(--blue-500); background: var(--neutral-50);">
+              <h3 class="section-title fw-semibold m-0 mb-3" style="font-size: 0.9375rem; color: var(--green-900);">Choose Fragrance 2</h3>
+              <div class="fragrance-options d-flex gap-2 mt-3">
+                <label class="fragrance-option active position-relative d-flex flex-column bg-white border rounded-2 p-2 flex-grow-1" data-fragrance="original" style="cursor: pointer; transition: all 0.2s;">
+                  <input type="radio" name="fragrance2" value="original" checked class="position-absolute opacity-0">
+                  <div class="fragrance-header d-flex align-items-center gap-2 mb-2">
+                    <span class="fragrance-radio-custom rounded-circle" style="width: 18px; height: 18px; border: 2px solid var(--neutral-300); background: var(--white); flex-shrink: 0;"></span>
+                    <span class="fragrance-name fw-medium" style="font-size: 0.875rem; color: var(--text-primary);">Original</span>
+                  </div>
+                  <div class="fragrance-badge position-absolute text-white text-uppercase fw-bold" style="top: -8px; left: 50%; transform: translateX(-50%); background: var(--green-800); padding: 4px 10px; font-size: 0.625rem; letter-spacing: 0.5px; z-index: 10; border-radius: 10px 0px 10px 0px;">BEST-SELLER</div>
+                  <div class="fragrance-bottle w-100 rounded-2 d-flex align-items-center justify-content-center mt-2" style="height: 140px; background: var(--neutral-50); padding: 12px 8px;">
+                    <img src="./assets/images/p(1).png" alt="Original" class="w-100 h-100 object-fit-contain">
+                  </div>
+                </label>
+
+                <label class="fragrance-option position-relative d-flex flex-column bg-white border rounded-2 p-2 flex-grow-1" data-fragrance="lily" style="cursor: pointer; transition: all 0.2s;">
+                  <input type="radio" name="fragrance2" value="lily" class="position-absolute opacity-0">
+                  <div class="fragrance-header d-flex align-items-center gap-2 mb-2">
+                    <span class="fragrance-radio-custom rounded-circle" style="width: 18px; height: 18px; border: 2px solid var(--neutral-300); background: var(--white); flex-shrink: 0;"></span>
+                    <span class="fragrance-name fw-medium" style="font-size: 0.875rem; color: var(--text-primary);">Lily</span>
+                  </div>
+                  <div class="fragrance-bottle w-100 rounded-2 d-flex align-items-center justify-content-center mt-2" style="height: 140px; background: var(--neutral-50); padding: 12px 8px;">
+                    <img src="./assets/images/p(2).png" alt="Lily" class="w-100 h-100 object-fit-contain">
+                  </div>
+                </label>
+
+                <label class="fragrance-option position-relative d-flex flex-column bg-white border rounded-2 p-2 flex-grow-1" data-fragrance="rose" style="cursor: pointer; transition: all 0.2s;">
+                  <input type="radio" name="fragrance2" value="rose" class="position-absolute opacity-0">
+                  <div class="fragrance-header d-flex align-items-center gap-2 mb-2">
+                    <span class="fragrance-radio-custom rounded-circle" style="width: 18px; height: 18px; border: 2px solid var(--neutral-300); background: var(--white); flex-shrink: 0;"></span>
+                    <span class="fragrance-name fw-medium" style="font-size: 0.875rem; color: var(--text-primary);">Rose</span>
+                  </div>
+                  <div class="fragrance-bottle w-100 rounded-2 d-flex align-items-center justify-content-center mt-2" style="height: 140px; background: var(--neutral-50); padding: 12px 8px;">
+                    <img src="./assets/images/p(3).png" alt="Rose" class="w-100 h-100 object-fit-contain">
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <!-- What's Included -->
+            <div class="included-section mt-4">
+              <h3 class="section-title fw-semibold m-0 mb-3" style="font-size: 0.9375rem; color: var(--green-900);">What's Included:</h3>
+              <div class="row g-3">
+                <div class="col-6">
+                  <div class="included-box border rounded-2 p-3 bg-white d-flex flex-column align-items-center h-100">
+                    <div class="included-box-title fw-semibold text-center mb-2" style="font-size: 0.875rem; color: var(--text-primary);">Every 30 Days</div>
+                    <div class="included-bottles d-flex gap-2 align-items-end justify-content-center" id="includedBottles">
+                      <img src="./assets/images/product_1.png" alt="Bottle" class="included-bottle object-fit-contain" style="width: 80px;">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="included-box border rounded-2 p-3 bg-white d-flex flex-column align-items-center h-100">
+                    <div class="included-box-title fw-semibold text-center mb-2" style="font-size: 0.875rem; color: var(--text-primary);">One Time <span class="free-text" style="color: var(--green-800);">(Free)</span></div>
+                    <div class="included-bottles d-flex gap-2 align-items-end justify-content-center">
+                      <img src="./assets/images/p(1).png" alt="Bottle" class="included-bottle object-fit-contain" style="width: 50px; height: 120px;">
+                      <img src="./assets/images/p(2).png" alt="Bottle" class="included-bottle object-fit-contain" style="width: 50px; height: 120px;">
+                      <img src="./assets/images/p(3).png" alt="Bottle" class="included-bottle object-fit-contain" style="width: 50px; height: 120px;">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Features List -->
+            <div class="features-box border rounded-2 p-3 bg-white mt-4">
+              <ul class="features-list list-unstyled m-0 d-flex flex-column">
+                <li class="d-flex align-items-start gap-2" style="font-size: 0.875rem; color: var(--text-primary); line-height: 1.6;">
+                  <i data-feather="check" class="check-icon flex-shrink-0 mt-1" style="width: 18px; height: 18px; color: var(--green-800); stroke-width: 2.5;"></i>
+                  <span id="bottleCount">1 Bottle Shipped Monthly</span>
+                </li>
+                <li class="d-flex align-items-start gap-2" style="font-size: 0.875rem; color: var(--text-primary); line-height: 1.6;">
+                  <i data-feather="check" class="check-icon flex-shrink-0 mt-1" style="width: 18px; height: 18px; color: var(--green-800); stroke-width: 2.5;"></i>
+                  <span><strong>Free Sampler For Original, Lily And Rose Fragrances</strong></span>
+                </li>
+                <li class="d-flex align-items-start gap-2" style="font-size: 0.875rem; color: var(--text-primary); line-height: 1.6;">
+                  <i data-feather="check" class="check-icon flex-shrink-0 mt-1" style="width: 18px; height: 18px; color: var(--green-800); stroke-width: 2.5;"></i>
+                  <span><strong>50% OFF Shipping</strong></span>
+                </li>
+                <li class="d-flex align-items-start gap-2" style="font-size: 0.875rem; color: var(--text-primary); line-height: 1.6;">
+                  <i data-feather="check" class="check-icon flex-shrink-0 mt-1" style="width: 18px; height: 18px; color: var(--green-800); stroke-width: 2.5;"></i>
+                  <span>Pause Or Cancel Anytime After 3 Months Minimum</span>
+                </li>
+                <li class="d-flex align-items-start gap-2" style="font-size: 0.875rem; color: var(--text-primary); line-height: 1.6;">
+                  <i data-feather="check" class="check-icon flex-shrink-0 mt-1" style="width: 18px; height: 18px; color: var(--green-800); stroke-width: 2.5;"></i>
+                  <span>28 Day Money Back Guarantee*</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Double Subscription Option -->
+            <div class="subscription-option-box border rounded-2 p-3 bg-white mt-3">
+              <label class="subscription-radio d-flex align-items-center gap-2" style="cursor: pointer;">
+                <input type="radio" name="subscription" value="double" id="doubleSubscription" class="position-absolute opacity-0">
+                <span class="subscription-radio-custom rounded-circle flex-shrink-0" style="width: 20px; height: 20px; border: 2px solid var(--green-800); background: var(--white);"></span>
+                <div class="subscription-content d-flex align-items-center justify-content-between flex-grow-1">
+                  <span class="subscription-label fw-semibold ms-2" style="font-size: 1rem; color: var(--text-primary);">Double Subscription</span>
+                  <div class="subscription-price d-flex align-items-center gap-2">
+                    <span class="price fw-bold" style="font-size: 1.75rem; color: var(--green-900);">$169.99</span>
+                    <span class="price-old text-decoration-line-through" style="font-size: 1.125rem; color: var(--neutral-300);">$146</span>
+                  </div>
+                </div>
+              </label>
+            </div>
+
+            <!-- Add to Cart Button -->
+            <button class="btn-add-cart btn w-100 rounded-pill fw-bold text-uppercase text-white mt-3" style="padding: 16px 32px; background: linear-gradient(180deg, var(--green-700) 0%, var(--green-800) 100%); font-size: 1rem; letter-spacing: 0.5px; box-shadow: 0 2px 8px rgba(10, 77, 44, 0.3);">ADD TO CART</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OUR COLLECTION SECTION -->
+<section class="collection-section py-5 bg-white">
+  <div class="container" style="max-width: 1400px;">
+    <div class="row g-4 g-lg-5 align-items-start" style="--bs-gutter-x: 60px;">
+      <!-- Left Column: Accordion -->
+      <div class="col-12 col-lg-6">
+        <div class="collection-content">
+          <h2 class="collection-title fw-bold mb-5 mt-5" style="font-size: 2.5rem; color: var(--green-900); letter-spacing: -0.02em;">Our Collection</h2>
+          
+          <div class="accordion-custom d-flex flex-column gap-3">
+            <div class="accordion-item active border rounded-4 p-3" style="transition: all 0.3s;">
+              <div class="accordion-header d-flex align-items-center justify-content-between" style="cursor: pointer; padding: 12px 0;">
+                <h3 class="accordion-title fw-bold m-0" style="font-size: 1.1875rem; color: var(--green-900);">Signature Scents</h3>
+                <i data-feather="minus" class="accordion-icon flex-shrink-0" style="width: 24px; height: 24px; color: var(--green-900); stroke-width: 2; transition: transform 0.3s;"></i>
+              </div>
+              <div class="accordion-content" style="max-height: 200px; overflow: hidden; transition: max-height 0.3s ease-out; padding-top: 12px;">
+                <p class="accordion-description m-0" style="font-size: 0.9375rem; line-height: 1.7; color: var(--text-secondary);">Discover our curated line of signature perfumes, designed to become your daily companion.</p>
+              </div>
+            </div>
+
+            <div class="accordion-item border rounded-4 p-3" style="transition: all 0.3s;">
+              <div class="accordion-header d-flex align-items-center justify-content-between" style="cursor: pointer; padding: 12px 0;">
+                <h3 class="accordion-title fw-bold m-0" style="font-size: 1.1875rem; color: var(--green-900);">Signature Scents</h3>
+                <i data-feather="plus" class="accordion-icon flex-shrink-0" style="width: 24px; height: 24px; color: var(--green-900); stroke-width: 2; transition: transform 0.3s;"></i>
+              </div>
+              <div class="accordion-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; padding-top: 0;">
+                <p class="accordion-description m-0" style="font-size: 0.9375rem; line-height: 1.7; color: var(--text-secondary);">Discover our curated line of signature perfumes, designed to become your daily companion.</p>
+              </div>
+            </div>
+
+            <div class="accordion-item border rounded-4 p-3" style="transition: all 0.3s;">
+              <div class="accordion-header d-flex align-items-center justify-content-between" style="cursor: pointer; padding: 12px 0;">
+                <h3 class="accordion-title fw-bold m-0" style="font-size: 1.1875rem; color: var(--green-900);">Signature Scents</h3>
+                <i data-feather="plus" class="accordion-icon flex-shrink-0" style="width: 24px; height: 24px; color: var(--green-900); stroke-width: 2; transition: transform 0.3s;"></i>
+              </div>
+              <div class="accordion-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; padding-top: 0;">
+                <p class="accordion-description m-0" style="font-size: 0.9375rem; line-height: 1.7; color: var(--text-secondary);">Discover our curated line of signature perfumes, designed to become your daily companion.</p>
+              </div>
+            </div>
+
+            <div class="accordion-item border rounded-4 p-3" style="transition: all 0.3s;">
+              <div class="accordion-header d-flex align-items-center justify-content-between" style="cursor: pointer; padding: 12px 0;">
+                <h3 class="accordion-title fw-bold m-0" style="font-size: 1.1875rem; color: var(--green-900);">Signature Scents</h3>
+                <i data-feather="plus" class="accordion-icon flex-shrink-0" style="width: 24px; height: 24px; color: var(--green-900); stroke-width: 2; transition: transform 0.3s;"></i>
+              </div>
+              <div class="accordion-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; padding-top: 0;">
+                <p class="accordion-description m-0" style="font-size: 0.9375rem; line-height: 1.7; color: var(--text-secondary);">Discover our curated line of signature perfumes, designed to become your daily companion.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Image -->
+      <div class="col-12 col-lg-6">
+        <div class="collection-image w-100 rounded-3 overflow-hidden" style="height: 600px; background: var(--neutral-100);">
+          <img src="./assets/images/collection.jpeg" alt="Perfume Collection" class="collection-img w-100 h-100 object-fit-cover d-block">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BANNER SECTION -->
+<section class="stats-banner py-5" style="background: var(--green-600);">
+  <div class="container" style="max-width: 1400px;">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 g-lg-5 align-items-center">
+      <div class="col">
+        <div class="stat-block d-flex flex-column align-items-center text-center gap-3">
+          <div class="stat-percentage counter-percentage fw-bold text-white m-0" data-target="84" style="font-size: 4rem; line-height: 1;">0%</div>
+          <p class="stat-description text-white m-0 text-center" style="font-size: 0.9375rem; line-height: 1.6;">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="stat-block d-flex flex-column align-items-center text-center gap-3">
+          <div class="stat-percentage counter-percentage fw-bold text-white m-0" data-target="78" style="font-size: 4rem; line-height: 1;">0%</div>
+          <p class="stat-description text-white m-0 text-center" style="font-size: 0.9375rem; line-height: 1.6;">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="stat-block d-flex flex-column align-items-center text-center gap-3">
+          <div class="stat-percentage counter-percentage fw-bold text-white m-0" data-target="89" style="font-size: 4rem; line-height: 1;">0%</div>
+          <p class="stat-description text-white m-0 text-center" style="font-size: 0.9375rem; line-height: 1.6;">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="stat-block d-flex flex-column align-items-center text-center gap-3">
+          <div class="stat-percentage counter-percentage fw-bold text-white m-0" data-target="90" style="font-size: 4rem; line-height: 1;">0%</div>
+          <p class="stat-description text-white m-0 text-center" style="font-size: 0.9375rem; line-height: 1.6;">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON TABLE SECTION -->
+<section class="comparison-section py-5 bg-white">
+  <div class="container d-flex flex-column align-items-center" style="max-width: 1400px;">
+    <div class="comparison-divider mb-4" style="width: 60px; height: 1px; border-top: 2px dashed var(--neutral-300);"></div>
+    <h2 class="comparison-title fw-bold text-center mb-5" style="font-size: 2.5rem; color: var(--green-900); letter-spacing: -0.02em;">Why GTG is the #1 Choice</h2>
+    
+    <div class="comparison-table-wrapper w-100 overflow-auto mb-4">
+      <table class="comparison-table table bg-white rounded overflow-hidden" style="border-collapse: collapse;">
+        <thead class="bg-white">
+          <tr>
+            <th class="qualities-header text-start fw-semibold border-bottom p-3" style="font-size: 0.875rem; color: var(--text-primary);">Qualities</th>
+            <th class="product-header gtg-column text-center border-bottom p-3" style="font-size: 0.875rem; color: var(--text-primary); background: var(--green-tint); vertical-align: top;">
+              <div class="product-image-wrapper mx-auto mb-3 rounded-2 d-flex align-items-center justify-content-center shadow-sm" style="width: 80px; height: 80px; background: var(--green-tint);">
+                <img src="./assets/images/table1.jpg" alt="GTG" class="product-image w-100 h-100 object-fit-cover rounded-2">
+              </div>
+              <div class="product-name fw-semibold mt-2" style="font-size: 1rem; color: var(--text-primary);">GTG</div>
+            </th>
+            <th class="product-header text-center border-bottom p-3" style="font-size: 0.875rem; color: var(--text-primary); vertical-align: top;">
+              <div class="product-image-wrapper mx-auto mb-3 rounded-2 d-flex align-items-center justify-content-center shadow-sm" style="width: 80px; height: 80px; background: var(--neutral-50);">
+                <img src="./assets/images/table2 (1).jpg" alt="Arise" class="product-image w-100 h-100 object-fit-cover rounded-2">
+              </div>
+              <div class="product-name fw-semibold mt-2" style="font-size: 1rem; color: var(--text-primary);">Arise</div>
+            </th>
+            <th class="product-header text-center border-bottom p-3" style="font-size: 0.875rem; color: var(--text-primary); vertical-align: top;">
+              <div class="product-image-wrapper mx-auto mb-3 rounded-2 d-flex align-items-center justify-content-center shadow-sm" style="width: 80px; height: 80px; background: var(--neutral-50);">
+                <img src="./assets/images/table2 (2).jpg" alt="Balla" class="product-image w-100 h-100 object-fit-cover rounded-2">
+              </div>
+              <div class="product-name fw-semibold mt-2" style="font-size: 1rem; color: var(--text-primary);">Balla</div>
+            </th>
+            <th class="product-header text-center border-bottom p-3" style="font-size: 0.875rem; color: var(--text-primary); vertical-align: top;">
+              <div class="product-image-wrapper mx-auto mb-3 rounded-2 d-flex align-items-center justify-content-center shadow-sm" style="width: 80px; height: 80px; background: var(--neutral-50);">
+                <img src="./assets/images/table2 (3).jpg" alt="Daisies" class="product-image w-100 h-100 object-fit-cover rounded-2">
+              </div>
+              <div class="product-name fw-semibold mt-2" style="font-size: 1rem; color: var(--text-primary);">Daisies</div>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-bottom">
+            <td class="quality-name text-start fw-medium p-3" style="font-size: 0.9375rem; color: var(--text-primary); vertical-align: middle;">Potency Concentration</td>
+            <td class="gtg-column text-center p-3" style="font-size: 0.9375rem; color: var(--text-primary); background: var(--green-tint); vertical-align: middle;">10x</td>
+            <td class="text-center p-3" style="font-size: 0.9375rem; color: var(--text-primary); vertical-align: middle;">1x</td>
+            <td class="text-center p-3" style="font-size: 0.9375rem; color: var(--text-primary); vertical-align: middle;">1x</td>
+            <td class="text-center p-3" style="font-size: 0.9375rem; color: var(--text-primary); vertical-align: middle;">10x</td>
+          </tr>
+          <tr class="border-bottom">
+            <td class="quality-name text-start fw-medium p-3" style="font-size: 0.9375rem; color: var(--text-primary); vertical-align: middle;">Longevity</td>
+            <td class="gtg-column text-center p-3" style="background: var(--green-tint); vertical-align: middle;">
+              <div class="status-icon check rounded-circle d-inline-flex align-items-center justify-content-center mx-auto" style="width: 32px; height: 32px; background: var(--success-bg); color: var(--green-800);">
+                <i data-feather="check" style="width: 18px; height: 18px; stroke-width: 3;"></i>
+              </div>
+            </td>
+            <td class="text-center p-3" style="vertical-align: middle;">
+              <div class="status-icon cross rounded-circle d-inline-flex align-items-center justify-content-center mx-auto" style="width: 32px; height: 32px; background: var(--danger-bg); color: var(--danger);">
+                <i data-feather="x" style="width: 18px; height: 18px; stroke-width: 3;"></i>
+              </div>
+            </td>
+            <td class="text-center p-3" style="vertical-align: middle;">
+              <div class="status-icon cross rounded-circle d-inline-flex align-items-center justify-content-center mx-auto" style="width: 32px; height: 32px; background: var(--danger-bg); color: var(--danger);">
+                <i data-feather="x" style="width: 18px; height: 18px; stroke-width: 3;"></i>
+              </div>
+            </td>
+            <td class="text-center p-3" style="vertical-align: middle;">
+              <div class="status-icon check rounded-circle d-inline-flex align-items-center justify-content-center mx-auto" style="width: 32px; height: 32px; background: var(--success-bg); color: var(--green-800);">
+                <i data-feather="check" style="width: 18px; height: 18px; stroke-width: 3;"></i>
+              </div>
+            </td>
+          </tr>
+          <tr class="border-bottom">
+            <td class="quality-name text-start fw-medium p-3" style="font-size: 0.9375rem; color: var(--text-primary); vertical-align: middle;">Sillage</td>
+            <td class="gtg-column text-center p-3" style="background: var(--green-tint); vertical-align: middle;">
+              <div class="status-icon check rounded-circle d-inline-flex align-items-center justify-content-center mx-auto" style="width: 32px; height: 32px; background: var(--success-bg); color: var(--green-800);">
+                <i data-feather="check" style="width: 18px; height: 18px; stroke-width: 3;"></i>
+              </div>
+            </td>
+            <td class="text-center p-3" style="vertical-align: middle;">
+              <div class="status-icon cross rounded-circle d-inline-flex align-items-center justify-content-center mx-auto" style="width: 32px; height: 32px; background: var(--danger-bg); color: var(--danger);">
+                <i data-feather="x" style="width: 18px; height: 18px; stroke-width: 3;"></i>
+              </div>
+            </td>
+            <td class="text-center p-3" style="vertical-align: middle;">
+              <div class="status-icon cross rounded-circle d-inline-flex align-items-center justify-content-center mx-auto" style="width: 32px; height: 32px; background: var(--danger-bg); color: var(--danger);">
+                <i data-feather="x" style="width: 18px; height: 18px; stroke-width: 3;"></i>
+              </div>
+            </td>
+            <td class="text-center p-3" style="vertical-align: middle;">
+              <div class="status-icon cross rounded-circle d-inline-flex align-items-center justify-content-center mx-auto" style="width: 32px; height: 32px; background: var(--danger-bg); color: var(--danger);">
+                <i data-feather="x" style="width: 18px; height: 18px; stroke-width: 3;"></i>
+              </div>
+            </td>
+          </tr>
+          <tr class="border-bottom">
+            <td class="quality-name text-start fw-medium p-3" style="font-size: 0.9375rem; color: var(--text-primary); vertical-align: middle;">Bottle Design Score</td>
+            <td class="gtg-column text-center p-3" style="font-size: 0.9375rem; color: var(--text-primary); background: var(--green-tint); vertical-align: middle;">9</td>
+            <td class="text-center p-3" style="font-size: 0.9375rem; color: var(--text-primary); vertical-align: middle;">5</td>
+            <td class="text-center p-3" style="font-size: 0.9375rem; color: var(--text-primary); vertical-align: middle;">6</td>
+            <td class="text-center p-3" style="font-size: 0.9375rem; color: var(--text-primary); vertical-align: middle;">2</td>
+          </tr>
+          <tr class="border-bottom">
+            <td class="quality-name text-start fw-medium p-3" style="font-size: 0.9375rem; color: var(--text-primary); vertical-align: middle;">Blend and Harmony</td>
+            <td class="gtg-column text-center p-3" style="background: var(--green-tint); vertical-align: middle;">
+              <div class="status-icon check rounded-circle d-inline-flex align-items-center justify-content-center mx-auto" style="width: 32px; height: 32px; background: var(--success-bg); color: var(--green-800);">
+                <i data-feather="check" style="width: 18px; height: 18px; stroke-width: 3;"></i>
+              </div>
+            </td>
+            <td class="text-center p-3" style="vertical-align: middle;">
+              <div class="status-icon cross rounded-circle d-inline-flex align-items-center justify-content-center mx-auto" style="width: 32px; height: 32px; background: var(--danger-bg); color: var(--danger);">
+                <i data-feather="x" style="width: 18px; height: 18px; stroke-width: 3;"></i>
+              </div>
+            </td>
+            <td class="text-center p-3" style="vertical-align: middle;">
+              <div class="status-icon cross rounded-circle d-inline-flex align-items-center justify-content-center mx-auto" style="width: 32px; height: 32px; background: var(--danger-bg); color: var(--danger);">
+                <i data-feather="x" style="width: 18px; height: 18px; stroke-width: 3;"></i>
+              </div>
+            </td>
+            <td class="text-center p-3" style="vertical-align: middle;">
+              <div class="status-icon cross rounded-circle d-inline-flex align-items-center justify-content-center mx-auto" style="width: 32px; height: 32px; background: var(--danger-bg); color: var(--danger);">
+                <i data-feather="x" style="width: 18px; height: 18px; stroke-width: 3;"></i>
+              </div>
+            </td>
+          </tr>
+          <tr class="border-bottom">
+            <td class="quality-name text-start fw-medium p-3" style="font-size: 0.9375rem; color: var(--text-primary); vertical-align: middle;">Skin Compatibility</td>
+            <td class="gtg-column text-center p-3" style="background: var(--green-tint); vertical-align: middle;">
+              <div class="status-icon check rounded-circle d-inline-flex align-items-center justify-content-center mx-auto" style="width: 32px; height: 32px; background: var(--success-bg); color: var(--green-800);">
+                <i data-feather="check" style="width: 18px; height: 18px; stroke-width: 3;"></i>
+              </div>
+            </td>
+            <td class="text-center p-3" style="vertical-align: middle;">
+              <div class="status-icon cross rounded-circle d-inline-flex align-items-center justify-content-center mx-auto" style="width: 32px; height: 32px; background: var(--danger-bg); color: var(--danger);">
+                <i data-feather="x" style="width: 18px; height: 18px; stroke-width: 3;"></i>
+              </div>
+            </td>
+            <td class="text-center p-3" style="vertical-align: middle;">
+              <div class="status-icon cross rounded-circle d-inline-flex align-items-center justify-content-center mx-auto" style="width: 32px; height: 32px; background: var(--danger-bg); color: var(--danger);">
+                <i data-feather="x" style="width: 18px; height: 18px; stroke-width: 3;"></i>
+              </div>
+            </td>
+            <td class="text-center p-3" style="vertical-align: middle;">
+              <div class="status-icon cross rounded-circle d-inline-flex align-items-center justify-content-center mx-auto" style="width: 32px; height: 32px; background: var(--danger-bg); color: var(--danger);">
+                <i data-feather="x" style="width: 18px; height: 18px; stroke-width: 3;"></i>
+              </div>
+            </td>
+          </tr>
+          <tr class="border-bottom">
+            <td class="quality-name text-start fw-medium p-3" style="font-size: 0.9375rem; color: var(--text-primary); vertical-align: middle;">Scent Profile</td>
+            <td class="gtg-column text-center p-3" style="background: var(--green-tint); vertical-align: middle;">
+              <div class="status-icon check rounded-circle d-inline-flex align-items-center justify-content-center mx-auto" style="width: 32px; height: 32px; background: var(--success-bg); color: var(--green-800);">
+                <i data-feather="check" style="width: 18px; height: 18px; stroke-width: 3;"></i>
+              </div>
+            </td>
+            <td class="text-center p-3" style="vertical-align: middle;">
+              <div class="status-icon check rounded-circle d-inline-flex align-items-center justify-content-center mx-auto" style="width: 32px; height: 32px; background: var(--success-bg); color: var(--green-800);">
+                <i data-feather="check" style="width: 18px; height: 18px; stroke-width: 3;"></i>
+              </div>
+            </td>
+            <td class="text-center p-3" style="vertical-align: middle;">
+              <div class="status-icon cross rounded-circle d-inline-flex align-items-center justify-content-center mx-auto" style="width: 32px; height: 32px; background: var(--danger-bg); color: var(--danger);">
+                <i data-feather="x" style="width: 18px; height: 18px; stroke-width: 3;"></i>
+              </div>
+            </td>
+            <td class="text-center p-3" style="vertical-align: middle;">
+              <div class="status-icon cross rounded-circle d-inline-flex align-items-center justify-content-center mx-auto" style="width: 32px; height: 32px; background: var(--danger-bg); color: var(--danger);">
+                <i data-feather="x" style="width: 18px; height: 18px; stroke-width: 3;"></i>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="quality-name text-start fw-medium p-3" style="font-size: 0.9375rem; color: var(--text-primary); vertical-align: middle;">Price vs. Quality</td>
+            <td class="gtg-column text-center p-3" style="background: var(--green-tint); vertical-align: middle;">
+              <div class="status-icon check rounded-circle d-inline-flex align-items-center justify-content-center mx-auto" style="width: 32px; height: 32px; background: var(--success-bg); color: var(--green-800);">
+                <i data-feather="check" style="width: 18px; height: 18px; stroke-width: 3;"></i>
+              </div>
+            </td>
+            <td class="text-center p-3" style="vertical-align: middle;">
+              <div class="status-icon check rounded-circle d-inline-flex align-items-center justify-content-center mx-auto" style="width: 32px; height: 32px; background: var(--success-bg); color: var(--green-800);">
+                <i data-feather="check" style="width: 18px; height: 18px; stroke-width: 3;"></i>
+              </div>
+            </td>
+            <td class="text-center p-3" style="vertical-align: middle;">
+              <div class="status-icon cross rounded-circle d-inline-flex align-items-center justify-content-center mx-auto" style="width: 32px; height: 32px; background: var(--danger-bg); color: var(--danger);">
+                <i data-feather="x" style="width: 18px; height: 18px; stroke-width: 3;"></i>
+              </div>
+            </td>
+            <td class="text-center p-3" style="vertical-align: middle;">
+              <div class="status-icon check rounded-circle d-inline-flex align-items-center justify-content-center mx-auto" style="width: 32px; height: 32px; background: var(--success-bg); color: var(--green-800);">
+                <i data-feather="check" style="width: 18px; height: 18px; stroke-width: 3;"></i>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    <button class="btn btn-try-risk-free rounded-pill fw-bold text-white" style="padding: 16px 48px; background: var(--green-800); font-size: 1rem; box-shadow: 0 2px 8px rgba(10, 77, 44, 0.3); transition: all 0.2s; border: none;">Try It Risk-Free</button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer py-5 w-100" style="background: var(--green-800);">
+  <div class="container" style="max-width: 1400px;">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 g-lg-5 align-items-start">
+      <!-- Brand/Logo Section -->
+      <div class="col">
+        <div class="footer-brand d-flex flex-column">
+          <div class="footer-logo fw-bold text-white text-uppercase" style="font-size: 3rem; letter-spacing: -0.02em;">GTG</div>
+        </div>
+      </div>
+
+      <!-- Navigation Links Section -->
+      <div class="col">
+        <div class="footer-nav">
+          <div class="row row-cols-2 g-4">
+            <div class="col">
+              <div class="footer-nav-column d-flex flex-column gap-3">
+                <a href="#" class="footer-link text-white text-decoration-none" style="font-size: 0.9375rem; transition: opacity 0.2s;">Home</a>
+                <a href="#" class="footer-link text-white text-decoration-none" style="font-size: 0.9375rem; transition: opacity 0.2s;">Shop</a>
+                <a href="#" class="footer-link text-white text-decoration-none" style="font-size: 0.9375rem; transition: opacity 0.2s;">Fragrances</a>
+              </div>
+            </div>
+            <div class="col">
+              <div class="footer-nav-column d-flex flex-column gap-3">
+                <a href="#" class="footer-link text-white text-decoration-none" style="font-size: 0.9375rem; transition: opacity 0.2s;">About Us</a>
+                <a href="#" class="footer-link text-white text-decoration-none" style="font-size: 0.9375rem; transition: opacity 0.2s;">Blog</a>
+                <a href="#" class="footer-link text-white text-decoration-none" style="font-size: 0.9375rem; transition: opacity 0.2s;">Contact</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Social Media Links Section -->
+      <div class="col">
+        <div class="footer-social d-flex flex-column gap-3">
+          <a href="#" class="social-link d-flex align-items-center gap-2 text-white text-decoration-none" style="font-size: 0.9375rem; transition: opacity 0.2s;">
+            <i data-feather="facebook" class="social-icon" style="width: 20px; height: 20px; stroke-width: 2;"></i>
+            <span>Facebook</span>
+          </a>
+          <a href="#" class="social-link d-flex align-items-center gap-2 text-white text-decoration-none" style="font-size: 0.9375rem; transition: opacity 0.2s;">
+            <i data-feather="instagram" class="social-icon" style="width: 20px; height: 20px; stroke-width: 2;"></i>
+            <span>Instagram</span>
+          </a>
+          <a href="#" class="social-link d-flex align-items-center gap-2 text-white text-decoration-none" style="font-size: 0.9375rem; transition: opacity 0.2s;">
+            <i data-feather="twitter" class="social-icon" style="width: 20px; height: 20px; stroke-width: 2;"></i>
+            <span>x</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Newsletter Subscription Section -->
+      <div class="col">
+        <div class="footer-newsletter d-flex flex-column gap-3">
+          <p class="newsletter-heading text-white m-0" style="font-size: 0.9375rem; line-height: 1.6;">Join our newsletter to stay up to date on features and releases.</p>
+          <form class="newsletter-form d-flex gap-2 align-items-start flex-column flex-sm-row">
+            <input type="email" class="newsletter-input form-control rounded-1 flex-grow-1" placeholder="Enter your email" required style="padding: 12px 16px; background: var(--green-800); border: 1px solid var(--white); color: var(--white); font-size: 0.9375rem;">
+            <button type="submit" class="newsletter-button btn rounded-1 fw-semibold text-white" style="padding: 12px 24px; background: var(--cta-brown); font-size: 0.9375rem; white-space: nowrap; border: none; transition: background 0.2s;">Subscribe</button>
+          </form>
+          <p class="newsletter-disclaimer text-white m-0" style="font-size: 0.8125rem; line-height: 1.6; opacity: 0.7;">
+            By subscribing you agree to with our <a href="#" class="privacy-link text-decoration-underline" style="color: rgba(255, 255, 255, 0.7); transition: color 0.2s;">Privacy Policy</a> and provide consent to receive updates from our company.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./js/main.js"></script>
+  <script>
+    feather.replace();
+  </script>
+</body>
+</html>
