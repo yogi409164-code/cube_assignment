@@ -206,6 +206,44 @@
                     <span class="fragrance-radio-custom rounded-circle" style="width: 18px; height: 18px; border: 2px solid var(--neutral-300); background: var(--white); flex-shrink: 0;"></span>
                     <span class="fragrance-name fw-medium" style="font-size: 0.875rem; color: var(--text-primary);">Original</span>
                   </div>
+                  <div class="fragrance-badge position-absolute text-white text-uppercase fw-bold" style="top: -8px; left: 75%; transform: translateX(-50%); background: var(--green-800); padding: 4px 10px; font-size: 0.625rem; letter-spacing: 0.5px; z-index: 10; border-radius: 10px 0px 10px 0px;">BESTSELLER</div>
+                  <div class="fragrance-bottle w-100 rounded-2 d-flex align-items-center justify-content-center mt-2" style="height: 140px; background: var(--neutral-50); padding: 12px 8px;">
+                    <img src="./assets/images/p(1).png" alt="Original" class="w-100 h-100 object-fit-contain">
+                  </div>
+                </label>
+
+                <label class="fragrance-option position-relative d-flex flex-column bg-white border rounded-2 p-2 flex-grow-1" data-fragrance="lily" style="cursor: pointer; transition: all 0.2s;">
+                  <input type="radio" name="fragrance1" value="lily" class="position-absolute opacity-0">
+                  <div class="fragrance-header d-flex align-items-center gap-2 mb-2">
+                    <span class="fragrance-radio-custom rounded-circle" style="width: 18px; height: 18px; border: 2px solid var(--neutral-300); background: var(--white); flex-shrink: 0;"></span>
+                    <span class="fragrance-name fw-medium" style="font-size: 0.875rem; color: var(--text-primary);">Lily</span>
+                  </div>
+                  <div class="fragrance-bottle w-100 rounded-2 d-flex align-items-center justify-content-center mt-2" style="height: 140px; background: var(--neutral-50); padding: 12px 8px;">
+                    <img src="./assets/images/p(2).png" alt="Lily" class="w-100 h-100 object-fit-contain">
+                  </div>
+                </label>
+
+                <label class="fragrance-option position-relative d-flex flex-column bg-white border rounded-2 p-2 flex-grow-1" data-fragrance="rose" style="cursor: pointer; transition: all 0.2s;">
+                  <input type="radio" name="fragrance1" value="rose" class="position-absolute opacity-0">
+                  <div class="fragrance-header d-flex align-items-center gap-2 mb-2">
+                    <span class="fragrance-radio-custom rounded-circle" style="width: 18px; height: 18px; border: 2px solid var(--neutral-300); background: var(--white); flex-shrink: 0;"></span>
+                    <span class="fragrance-name fw-medium" style="font-size: 0.875rem; color: var(--text-primary);">Rose</span>
+                  </div>
+                  <div class="fragrance-bottle w-100 rounded-2 d-flex align-items-center justify-content-center mt-2" style="height: 140px; background: var(--neutral-50); padding: 12px 8px;">
+                    <img src="./assets/images/p(3).png" alt="Rose" class="w-100 h-100 object-fit-contain">
+                  </div>
+                </label>
+              </div>
+            </div>
+            <div class="fragrance-section fragrance-section-2 mt-4" style="display: none;">
+              <h3 class="section-title fw-semibold m-0 mb-3" id="fragranceTitle1" style="font-size: 0.9375rem; color: var(--green-900);">Choose Fragrance 2</h3>
+              <div class="fragrance-options d-flex gap-2 mt-3">
+                <label class="fragrance-option active position-relative d-flex flex-column bg-white border rounded-2 p-2 flex-grow-1" data-fragrance="original" style="cursor: pointer; transition: all 0.2s;">
+                  <input type="radio" name="fragrance1" value="original" checked class="position-absolute opacity-0">
+                  <div class="fragrance-header d-flex align-items-center gap-2 mb-2">
+                    <span class="fragrance-radio-custom rounded-circle" style="width: 18px; height: 18px; border: 2px solid var(--neutral-300); background: var(--white); flex-shrink: 0;"></span>
+                    <span class="fragrance-name fw-medium" style="font-size: 0.875rem; color: var(--text-primary);">Original</span>
+                  </div>
                   <div class="fragrance-badge position-absolute text-white text-uppercase fw-bold" style="top: -8px; left: 50%; transform: translateX(-50%); background: var(--green-800); padding: 4px 10px; font-size: 0.625rem; letter-spacing: 0.5px; z-index: 10; border-radius: 10px 0px 10px 0px;">BEST-SELLER</div>
                   <div class="fragrance-bottle w-100 rounded-2 d-flex align-items-center justify-content-center mt-2" style="height: 140px; background: var(--neutral-50); padding: 12px 8px;">
                     <img src="./assets/images/p(1).png" alt="Original" class="w-100 h-100 object-fit-contain">
@@ -235,9 +273,8 @@
                 </label>
               </div>
             </div>
-
             <!-- Fragrance Selection 2 (Hidden by default) -->
-            <div class="fragrance-section fragrance-section-2 mt-4 p-3 rounded-2" style="display: none; border: 2px dashed var(--blue-500); background: var(--neutral-50);">
+            <!-- <div class="fragrance-section fragrance-section-2 mt-4 p-3 rounded-2" style="display: none; border: 2px dashed var(--blue-500); background: var(--neutral-50);">
               <h3 class="section-title fw-semibold m-0 mb-3" style="font-size: 0.9375rem; color: var(--green-900);">Choose Fragrance 2</h3>
               <div class="fragrance-options d-flex gap-2 mt-3">
                 <label class="fragrance-option active position-relative d-flex flex-column bg-white border rounded-2 p-2 flex-grow-1" data-fragrance="original" style="cursor: pointer; transition: all 0.2s;">
@@ -274,7 +311,7 @@
                   </div>
                 </label>
               </div>
-            </div>
+            </div> -->
 
             <!-- What's Included -->
             <div class="included-section mt-4">
@@ -284,7 +321,7 @@
                   <div class="included-box border rounded-2 p-3 bg-white d-flex flex-column align-items-center h-100">
                     <div class="included-box-title fw-semibold text-center mb-2" style="font-size: 0.875rem; color: var(--text-primary);">Every 30 Days</div>
                     <div class="included-bottles d-flex gap-2 align-items-end justify-content-center" id="includedBottles">
-                      <img src="./assets/images/product_1.png" alt="Bottle" class="included-bottle object-fit-contain" style="width: 80px;">
+                      <img src="./assets/images/p(1).png" alt="Bottle" class="included-bottle object-fit-contain" style="width: 80px;">
                     </div>
                   </div>
                 </div>
@@ -448,7 +485,7 @@
 
 <!-- COMPARISON TABLE SECTION -->
 <section class="comparison-section py-5 bg-white">
-  <div class="container d-flex flex-column align-items-center" style="max-width: 1400px;">
+  <div class="container d-flex flex-column align-items-center" style="max-width: 1250px;">
     <div class="comparison-divider mb-4" style="width: 60px; height: 1px; border-top: 2px dashed var(--neutral-300);"></div>
     <h2 class="comparison-title fw-bold text-center mb-5" style="font-size: 2.5rem; color: var(--green-900); letter-spacing: -0.02em;">Why GTG is the #1 Choice</h2>
     

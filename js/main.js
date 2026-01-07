@@ -193,52 +193,52 @@ $(document).ready(function() {
     }
 
     // Function to update included bottles based on selected fragrances
-    function updateIncludedBottles() {
-      const $includedBottles = $('#includedBottles');
-      if (!$includedBottles.length) return;
+    // function updateIncludedBottles() {
+    //   const $includedBottles = $('#includedBottles');
+    //   if (!$includedBottles.length) return;
 
-      const subscriptionType = $('input[name="subscription"]:checked').val();
-      const fragrance1 = $('input[name="fragrance1"]:checked').val();
-      const fragrance2 = $('input[name="fragrance2"]:checked').val();
+    //   const subscriptionType = $('input[name="subscription"]:checked').val();
+    //   const fragrance1 = $('input[name="fragrance1"]:checked').val();
+    //   const fragrance2 = $('input[name="fragrance2"]:checked').val();
 
-      const fragranceImages = {
-        'original': './assets/images/p(1).png',
-        'lily': './assets/images/p(2).png',
-        'rose': './assets/images/p(3).png'
-      };
+    //   const fragranceImages = {
+    //     'original': './assets/images/p(1).png',
+    //     'lily': './assets/images/p(2).png',
+    //     'rose': './assets/images/p(3).png'
+    //   };
 
-      $includedBottles.empty();
+    //   $includedBottles.empty();
 
-      if (subscriptionType === 'double') {
-        // Show 2 bottles for double subscription
-        if (fragrance1) {
-          const $img1 = $('<img>', {
-            src: fragranceImages[fragrance1] || './assets/images/product_1.png',
-            alt: 'Bottle',
-            class: 'included-bottle'
-          });
-          $includedBottles.append($img1);
-        }
-        if (fragrance2) {
-          const $img2 = $('<img>', {
-            src: fragranceImages[fragrance2] || './assets/images/product_1.png',
-            alt: 'Bottle',
-            class: 'included-bottle'
-          });
-          $includedBottles.append($img2);
-        }
-      } else {
-        // Show 1 bottle for single subscription
-        if (fragrance1) {
-          const $img = $('<img>', {
-            src: fragranceImages[fragrance1] || './assets/images/product_1.png',
-            alt: 'Bottle',
-            class: 'included-bottle'
-          });
-          $includedBottles.append($img);
-        }
-      }
-    }
+    //   if (subscriptionType === 'double') {
+    //     // Show 2 bottles for double subscription
+    //     if (fragrance1) {
+    //       const $img1 = $('<img>', {
+    //         src: fragranceImages[fragrance1] || './assets/images/product_1.png',
+    //         alt: 'Bottle',
+    //         class: 'included-bottle'
+    //       });
+    //       $includedBottles.append($img1);
+    //     }
+    //     if (fragrance2) {
+    //       const $img2 = $('<img>', {
+    //         src: fragranceImages[fragrance2] || './assets/images/product_1.png',
+    //         alt: 'Bottle',
+    //         class: 'included-bottle'
+    //       });
+    //       $includedBottles.append($img2);
+    //     }
+    //   } else {
+    //     // Show 1 bottle for single subscription
+    //     if (fragrance1) {
+    //       const $img = $('<img>', {
+    //         src: fragranceImages[fragrance1] || './assets/images/product_1.png',
+    //         alt: 'Bottle',
+    //         class: 'included-bottle'
+    //       });
+    //       $includedBottles.append($img);
+    //     }
+    //   }
+    // }
 
     // Subscription type change handler
     $('input[name="subscription"]').on('change', function() {

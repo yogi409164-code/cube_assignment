@@ -3,7 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+.form-check-input:checked {
+    background-color: var(--green-800);
+    border-color: var(--green-800);
+}
 body {
   font-family: var(--font-primary);
   overflow-x: hidden;
